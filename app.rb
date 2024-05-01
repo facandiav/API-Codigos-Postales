@@ -6,7 +6,7 @@ Cuba.define do
     end
 
     on 'codigo_postal/:codigo_postal' do |codigo_postal|
-      env['warden'].authenticate!(:token)
+      #env['warden'].authenticate!(:token)
       res.headers['Cache-Control'] = 'max-age=525600, public'
       res.headers['Content-Type'] = 'application/json; charset=utf-8'
       res.headers['Access-Control-Allow-Origin'] = '*'
@@ -15,7 +15,7 @@ Cuba.define do
     end
 
     on 'buscar', param('q') do |query|
-      env['warden'].authenticate!(:token)
+      #env['warden'].authenticate!(:token)
       res.headers['Cache-Control'] = 'max-age=525600, public'
       res.headers['Content-Type'] = 'application/json; charset=utf-8'
       res.headers['Access-Control-Allow-Origin'] = '*'
@@ -26,7 +26,7 @@ Cuba.define do
     end
 
     on 'v2/codigo_postal/:codigo_postal' do |codigo_postal|
-      env['warden'].authenticate!(:token)
+      #env['warden'].authenticate!(:token)
       res.headers['Cache-Control'] = 'max-age=525600, public'
       res.headers['Content-Type'] = 'application/json; charset=utf-8'
       res.headers['Access-Control-Allow-Origin'] = '*'
@@ -34,7 +34,7 @@ Cuba.define do
     end
 
     on 'v2/buscar', param('codigo_postal') do |codigo_postal|
-      env['warden'].authenticate!(:token)
+      #env['warden'].authenticate!(:token)
       res.headers['Cache-Control'] = 'max-age=525600, public'
       res.headers['Content-Type'] = 'application/json; charset=utf-8'
       res.headers['Access-Control-Allow-Origin'] = '*'
